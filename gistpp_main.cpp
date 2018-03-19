@@ -519,16 +519,18 @@ int main (int argc, char** argv) {
             << "For help run ./gistpp -h\n\n";
             exit (0);
         }
+	
 	if (infile.substr( infile.length() - 4 ) == ".pdb" ) {
 		cerr << "\nERROR: Dx file expected to be defined by flag -i, .pdb file given instead\n"
 		<< "For help run ./gistpp -h\n\n";
 		exit(0);
 	}
-	if (infile2.substr( infile.length() - 3 ) == ".dx" ) {
+	if (infile2.substr( infile2.length() - 3 ) == ".dx" ) {
 		cerr << "\nERROR: Ligand file expected to be defined by flag -i2, .dx file given instead\n"
 		<< "For help run ./gistpp -h\n\n";
 		exit(0);
 	}
+	
         if (options.size() == 0) {
             cerr << "\nERROR: Need to specify desired distance around heavy atoms with const option with the flag -opt const\n"
             << "For help run ./gistpp -h\n\n";
